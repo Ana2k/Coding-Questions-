@@ -17,6 +17,7 @@ class Solution:
                 dfs(i+1,j,image,newColour)
             dfs(sr,sc,image,newColour)
         return image
+
 #bfs
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColour: int) -> List[List[int]]:

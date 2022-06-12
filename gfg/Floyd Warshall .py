@@ -6,6 +6,7 @@ class Solution:
 		#https://www.youtube.com/watch?v=oNI0rf2P9gE&ab_channel=AbdulBari
 		#explanation video by abdul bari useful link
 		#for generating the matrix
+        n = len(matrix)
 		for k in range(n):
     		for i in range(n):
     		    for j in range(n):

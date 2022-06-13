@@ -8,12 +8,12 @@ class Solution:
             return n
         #sliding window approach using hash maps
         res = 0
-        c = Counter()
+        di = Counter()
         while(r<n):
-            c[s[r]]+=1
-            while(c[s[r]]!=k and l<r):#would have been k here instead of 1 for k distinct characters
-                if c[s[l]]-1>=0:
-                    c[s[l]]-=1
+            di[s[r]]+=1
+            while(di[s[r]]!=k and l<r):#would have been k here instead of 1 for k distinct characters
+                if di[s[l]]-1>=0:
+                    di[s[l]]-=1
                 l+=1
             res = max(r-l+1,res)
             r+=1

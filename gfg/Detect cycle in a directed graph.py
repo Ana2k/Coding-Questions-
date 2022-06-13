@@ -1,21 +1,17 @@
 #User function Template for python3
-#june 11 - graph
 from collections import defaultdict
 class Solution:
-    def dfs(self,currnode,parent,adj,visited,dfsVis):
+    def dfs(self,currnode,adj,visited,dfsVis):
         visited[currnode] = True
+        dfsVis[currnode] = True
         for node in adj[currnode]:
             if visited[node]==False:
-                if self.dfs(node,currnode,adj,visited,dfsVis):
+                if self.dfs(node,adj,visited,dfsVis):
                     return True
-            # If an adjacent vertex is
-            # visited and not parent
-            # of current vertex,
-            # then there is a cycle
-            elif parent!=node:
+            elif dfsVis[node]==True:
                 return True
                 
-        
+        dfsVis[currnode] = False
         return False
     
     #Function to detect cycle in a directed graph.
@@ -23,9 +19,10 @@ class Solution:
         # code here
         # https://www.youtube.com/watch?v=uzVUw90ZFIg - striver explanation
         visited = defaultdict(lambda : False)
+        dfsVis = defaultdict(lambda : False)
         for i in range(V):
             if(visited[i]==False):
-                cycle = self.dfs(i,-1,adj,visited)
+                cycle = self.dfs(i,adj,visited,dfsVis)
                 if cycle:
                     return True
         return False

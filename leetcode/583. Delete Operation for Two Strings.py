@@ -14,5 +14,3 @@ class Solution:
                     dp[i][j] = max(dp[i][j-1],dp[i-1][j])
         lcs = dp[m][n]
         return (m+n)-2*lcs
-        
-            

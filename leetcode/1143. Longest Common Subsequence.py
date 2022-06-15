@@ -1,5 +1,6 @@
 class Solution:
     def longestCommonSubsequence(self, A: str, B: str) -> int:
+        #think why its different from longest common substring ;)
         #bottom_up
         m = len(A)
         n = len(B)

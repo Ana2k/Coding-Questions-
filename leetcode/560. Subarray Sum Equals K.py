@@ -30,7 +30,7 @@ class Solution:
     
 #     #basically how do we find the subarray sum? by prestoring it. 
 #     # for array [1,2,3,4] we have prefix_sum = [1,3,6,10] then 
-#     #for each subarray(j,i) we only need to do: sumi = prefix[i]-prefix[j] to find its sum
+#     #for each subarray(i,j) we only need to do: sumi = prefix[i]-prefix[j] to find its sum
     
 #     #now how to update the count? if prefix[i]==k then count+=1 
 #     # (as that means from 1 till that number we have a target)

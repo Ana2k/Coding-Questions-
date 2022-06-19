@@ -1,51 +1,30 @@
-#User function Template for python3
+#graph  - cycle in a directed graph
 from collections import defaultdict
 class Solution:
-    def dfs(self,currnode,adj,visited,dfsVis):
-        visited[currnode] = True
+    def dfs(self,currnode,adj,vis,dfsVis):
+        vis[currnode] = True
         dfsVis[currnode] = True
         for node in adj[currnode]:
-            if visited[node]==False:
-                if self.dfs(node,adj,visited,dfsVis):
+            if vis[node]==False:
+                cycle = self.dfs(node,adj,vis,dfsVis)
+                if cycle:
                     return True
             elif dfsVis[node]==True:
                 return True
-                
+        #this cycle ended now clear the dfsVis currnode for other cycles.
         dfsVis[currnode] = False
         return False
-    
     #Function to detect cycle in a directed graph.
     def isCyclic(self, V, adj):
         # code here
         # https://www.youtube.com/watch?v=uzVUw90ZFIg - striver explanation
-        visited = defaultdict(lambda : False)
+        #visited is keeping track of overall visits of node
+        #but dfsvisited is keeping track if the node was visited in the current movement.
+        vis = defaultdict(lambda : False)
         dfsVis = defaultdict(lambda : False)
         for i in range(V):
-            if(visited[i]==False):
-                cycle = self.dfs(i,adj,visited,dfsVis)
+            if vis[i]==False:
+                cycle = self.dfs(i,adj,vis,dfsVis)
                 if cycle:
                     return True
         return False
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-import sys
-sys.setrecursionlimit(10**6)
-        
-if __name__ == '__main__':
-    t = int(input())
-    for i in range(t):
-        V,E = list(map(int, input().strip().split()))
-        adj = [[] for i in range(V)]
-        for i in range(E):
-            a,b = map(int,input().strip().split())
-            adj[a].append(b)
-        ob = Solution()
-        
-        if ob.isCyclic(V, adj):
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends

@@ -19,5 +19,3 @@ class Solution:
                 #no swaps needed
                 mid+=1
         return nums
-                
-        

@@ -1,5 +1,6 @@
 #UNDERSTANDING AND DIFFERENCE BETWEEN BOUNDED AND UNBOUNDED KNAPSACK
 #AND USING IT OVER COIN CHANGE PROBLEM.
+#dp - dynamic programming - coin change derivative
 class Solution:
     def minimumNumbers(self, num: int, k: int) -> int:
         if num==0:

@@ -1,7 +1,6 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
         #would have just used counter khatam kahani. O_O
-        #found the count Counter(nums), and then seen the number that comes twice return that. bass
         #but constant extra space so the following.
         n = len(nums)
         idx = 0

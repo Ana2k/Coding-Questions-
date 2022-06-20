@@ -19,23 +19,23 @@ class Solution:
         return image
 
 #bfs
-class Solution:
-    def floodFill(self, image: List[List[int]], sr: int, sc: int, newColour: int) -> List[List[int]]:
-        # https://leetcode.com/problems/flood-fill/discuss/2092266/Iterative-simple-BFS-solution
-        oldColour = image[sr][sc]
-        if oldColour!=newColour: 
-            totalRow = len(image)
-            totalCol = len(image[0])
-            q = deque()
-            q.append([sr,sc])
-            while(q):
-                # print(q,"1")
-                r,c = q.popleft()
-                if(totalRow>r>=0 and totalCol>c>=0 and image[r][c]==oldColour):
-                    image[r][c] = newColour
-                    q.append([r,c+1])
-                    q.append([r,c-1])
-                    q.append([r+1,c])
-                    q.append([r-1,c])
-                    # print(q,"2")
-        return image
+# class Solution:
+#     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColour: int) -> List[List[int]]:
+#         # https://leetcode.com/problems/flood-fill/discuss/2092266/Iterative-simple-BFS-solution
+#         oldColour = image[sr][sc]
+#         if oldColour!=newColour: 
+#             totalRow = len(image)
+#             totalCol = len(image[0])
+#             q = deque()
+#             q.append([sr,sc])
+#             while(q):
+#                 # print(q,"1")
+#                 r,c = q.popleft()
+#                 if(totalRow>r>=0 and totalCol>c>=0 and image[r][c]==oldColour):
+#                     image[r][c] = newColour
+#                     q.append([r,c+1])
+#                     q.append([r,c-1])
+#                     q.append([r+1,c])
+#                     q.append([r-1,c])
+#                     # print(q,"2")
+#         return image

@@ -1,22 +1,5 @@
 #Daily challenge june 12
-#Using Sets
-class Solution:
-    def maximumUniqueSubarray(self, nums: List[int]) -> int:
-        #set
-        n = len(nums)
-        l = r = 0
-        st = set()
-        currsum = res = 0
-        while(r<n):
-            while(nums[r] in st and l<=r):
-                st.remove(nums[l])
-                currsum-=nums[l]
-                l+=1
-            currsum+=nums[r]
-            res = max(res,currsum)
-            st.add(nums[r])
-            r+=1
-        return res
+#sliding window.
 #Using Dictionary
 class Solution:
     def maximumUniqueSubarray(self, nums: List[int]) -> int:
@@ -35,3 +18,29 @@ class Solution:
             res = max(res,currsum)
             r+=1
         return res            # print(nums[start:end+1]," ",currsum)
+
+
+
+
+
+
+
+
+# #Using Sets
+# class Solution:
+#     def maximumUniqueSubarray(self, nums: List[int]) -> int:
+#         #set
+#         n = len(nums)
+#         l = r = 0
+#         st = set()
+#         currsum = res = 0
+#         while(r<n):
+#             while(nums[r] in st and l<=r):
+#                 st.remove(nums[l])
+#                 currsum-=nums[l]
+#                 l+=1
+#             currsum+=nums[r]
+#             res = max(res,currsum)
+#             st.add(nums[r])
+#             r+=1
+#         return res

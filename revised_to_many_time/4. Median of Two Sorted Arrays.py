@@ -52,14 +52,14 @@ class Solution:
         i=j = idx =0
         nums = []
         while(idx<(m+n) and i<m and j<n):
-            ch1 = nums1[i]
+            ch1  = nums1[i]
             ch2 = nums2[j]
             if ch1<=ch2:
                 nums.append(ch1)
                 i+=1
             else:
                 nums.append(ch2)
-                j+=1    
+                j+=1
             idx+=1
         #either of these has ended or both have.
         while(i<m):

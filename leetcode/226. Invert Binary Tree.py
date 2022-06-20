@@ -15,17 +15,17 @@ class Solution:
         if not root:
             return 
         #recursive swapping
-        q = [root]
-        while(q):
-            r = q.pop()
-            if r:
-                if r.left:
-                    q.append(r.left)
-                if r.right:
-                    q.append(r.right)
-                temp = r.left
-                r.left = r.right
-                r.right = temp
+        stk = [root]
+        while(stk):
+            node = stk.pop()
+            if node:
+                if node.left:
+                    stk.append(node.left)
+                if node.right:
+                    stk.append(node.right)
+                temp = node.left
+                node.left = node.right
+                node.right = temp
         return  root
 
         

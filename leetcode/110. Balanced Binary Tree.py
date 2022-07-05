@@ -1,7 +1,8 @@
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         #think about when is the subtree not balanced?
-        #when abs(left_ht-right_ht)>1 or we can say to stay balanced we need abs(left_ht-right_ht)<=1
+        #when abs(left_ht-right_ht)>1 or we can say 
+        # MAIN CONDITION FOR BALANCED TREE: to stay balanced we need abs(left_ht-right_ht)<=1
         
         #function check returns max-height of the tree or -1
         #why are we returning height of the tree?

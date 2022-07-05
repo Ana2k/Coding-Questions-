@@ -11,6 +11,8 @@ class Solution:
             return None
         #base case
         if root==None or root==p or root==q:
+            #we dont need the root==None maybe. 
+            #run that once and check.
             return root
         l = self.lowestCommonAncestor(root.left,p,q)
         r = self.lowestCommonAncestor(root.right,p,q)

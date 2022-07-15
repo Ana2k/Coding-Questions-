@@ -18,3 +18,21 @@ class Solution:
                 if node.right: q.append(node.right) #right
             levels.append(level)
         return levels
+    
+    #DFS
+    # def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    #     levels = []
+    #     if not root:
+    #         return []
+    #     def dfs(node,depth):
+    #         if len(levels)==depth:
+    #             levels.append([])
+    #         levels[depth].append(node.val)               
+            
+    #         if node.left:
+    #             dfs(node.left,depth+1)
+    #         if node.right:
+    #             dfs(node.right,depth+1)
+            
+    #     dfs(root,0)
+    #     return levels

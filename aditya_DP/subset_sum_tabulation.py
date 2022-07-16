@@ -16,7 +16,7 @@ class Solution:
             dp[i][0] = 1
             
         for i in range(1,N+1):
-            for j in range(1,sum+1):
+            for j in range(sum+1):
                 #choice diagram
                 #you either choose a number of dont
                 if arr[i-1]<=j:

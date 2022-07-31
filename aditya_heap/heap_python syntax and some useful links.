@@ -1,0 +1,42 @@
+GFG article about what max-heap actually is:
+https://www.geeksforgeeks.org/max-heap-in-python/
+
+
+Max Heap implementation:
+https://stackoverflow.com/questions/2501457/what-do-i-use-for-a-max-heap-implementation-in-python
+
+minHeap = heapq.heapify(list_name)
+#invert all the keys into negative version for maxHeap
+maxHeap = run a loop and put all the values as heapq.heappush(list_nam,-val)
+
+
+
+A useful class, but just use it to,
+revise
+class MinHeap(object):
+  def __init__(self): self.h = []
+  def heappush(self, x): heapq.heappush(self.h, x)
+  def heappop(self): return heapq.heappop(self.h)
+  def __getitem__(self, i): return self.h[i]
+  def __len__(self): return len(self.h)
+
+class MaxHeap(MinHeap):
+  def heappush(self, x): heapq.heappush(self.h, MaxHeapObj(x))
+  def heappop(self): return heapq.heappop(self.h).val
+  def __getitem__(self, i): return self.h[i].val
+
+
+I also needed to use a max-heap, 
+and I was dealing with integers, 
+so I just wrapped the two methods that I needed from heap as follows:
+
+import heapq
+
+
+def heappush(heap, item):
+    return heapq.heappush(heap, -item)
+
+
+def heappop(heap):
+    return -heapq.heappop(heap)
+And then I just replaced my heapq.heappush() and heapq.heappop() calls with heappush() and heappop() respectively.

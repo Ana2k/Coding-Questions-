@@ -1,5 +1,5 @@
 #look at the paramas, to create size of the memo table
-#wee basically onnly need to add two lines..
+#wee basically only need to add two lines..
 
 def knapSack(self,W, wt, val, n):
         dp = [[-1 for col in range(W+1)] for row in range(n+1)]

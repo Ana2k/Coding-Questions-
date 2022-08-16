@@ -1,3 +1,4 @@
+#6.3
 #for memoisation approach please check this link
 # https://github.com/cl2333/Grokking-the-Coding-Interview-Patterns-for-Coding-Questions/blob/c9be833fe96f0333ab537e378b3989e47c659d54/15.%20Pattern%20%2001%20Knapsack%20(Dynamic%20Programming)/Problem%20Challenge%201%20-%20Count%20of%20Subset%20Sum%20(hard)%20.py#L84
 class Solution:

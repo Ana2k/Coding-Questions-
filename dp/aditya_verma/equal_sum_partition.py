@@ -1,3 +1,4 @@
+#6.2
 class Solution:
     def equalPartition(self, N, arr):
         #recursion

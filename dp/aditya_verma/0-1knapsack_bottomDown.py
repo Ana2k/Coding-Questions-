@@ -1,3 +1,6 @@
+#1.1
+#please add the question links love.
+
 def knapSack(self,W, wt, val, n):
         dp = [[-1 for col in range(W+1)] for row in range(n+1)]
         for i in range(n+1):

@@ -1,4 +1,5 @@
 '''
+#6 derivates
 1)Subset Sum Problem
 2)Equal Sum Partition
 3)Count of Subset Sum

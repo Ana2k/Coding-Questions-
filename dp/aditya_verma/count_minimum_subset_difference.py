@@ -1,3 +1,20 @@
+#6.4
+# /*
+
+# total sum, s = s1 + s2
+
+# We need to find number of subsets with s1 - s2 = diff
+
+# from equation 1: we can say s1 = s - s2
+# there fore
+# s - s2 - s2 = diff
+# s-2s2 = diff
+
+# (s - diff) / 2 = s2
+
+# So the problem reduces to number of subsets with a sum = s2
+
+# */
 #aim would be to make sum1-sum2 = 0 or tend to 0
 		#that is the minimum when you think in terms of mod.
 		#the next thing is, how will you find the minimum? think the max that 
@@ -18,12 +35,13 @@ def minDifferenceTabulation(self, arr, n):
 		dp = [[0]*(total+1) for i in range(n+1)]
 		#base cases for equal partition where what?
 		#n==0, no numbers to select from => that means no subsets, unless sum==0, then true
-		#sumi=0
+		
+		#we dont really need this line, once we use 0 as the default value    
+        # for j in range(total+1):
+		#     dp[0][j] = 0
+        #sumi=0
 		for i in range(n+1):
 		    dp[i][0] = 1
-		    
-        for j in range(1,total+1):
-		    dp[0][j] = 0
 # 		print(dp)
 		for i in range(1,N+1):
 		    for j in range(1,total+1):
@@ -31,10 +49,8 @@ def minDifferenceTabulation(self, arr, n):
 		            dp[i][j] = dp[i-1][j] or dp[i-1][j-arr[i-1]]
 		        else:
 		            dp[i][j] = dp[i-1][j]
-# 		print(dp)
 		#equal partition wala,
 		
-# 		print(dp)
 		#now find the last row, mei last True value, such that 
 		#that value was lesser than equal to sum//2
         res = float("inf")

@@ -1,4 +1,5 @@
-#look at the paramas, to create size of the memo table
+#1.2
+# #look at the paramas, to create size of the memo table
 #wee basically only need to add two lines..
 
 def knapSack(self,W, wt, val, n):

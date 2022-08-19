@@ -1,7 +1,7 @@
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         #gfg link
-        #https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
+        # https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
         # https://leetcode.com/problems/n-queens/discuss/2108334/EAZY-BEGINER-oror-EXPLANATION-FOR-ALL-oror
         board = [[0]*(n) for i in range(n)]
         res = []

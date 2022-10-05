@@ -5,7 +5,7 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         #bfs
         # https://leetcode.com/problems/number-of-islands/discuss/1919711/Standard-Template-Using-BFS-in-Python-Foundation-of-All-Similar-Questions!
-        dirs = [(0,1),(1,0),(-1,0),(0,-1)]
+        # dirs = [(0,1),(1,0),(-1,0),(0,-1)]
         #use visited? yes!
         self.visited = defaultdict(lambda : False)
         totalRow = len(grid)
@@ -22,8 +22,8 @@ class Solution:
         for row in range(totalRow):
             for col in range(totalCol):
                 if(grid[row][col]=="1"):
-                    dfs(row,col)
                     island+=1
+                    dfs(row,col)                    
         return island
 #bfs
 # class Solution:

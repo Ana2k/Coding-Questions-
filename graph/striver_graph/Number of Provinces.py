@@ -1,6 +1,6 @@
 #Question Link :
-#  https://practice.geeksforgeeks.org/problems/number-of-provinces/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number-of-provinces
-
+#  GFG : https://practice.geeksforgeeks.org/problems/number-of-provinces/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number-of-provinces
+# LEETCODE : https://leetcode.com/problems/number-of-provinces/#:~:text=A%20province%20is%20a%20group,the%20total%20number%20of%20provinces.
 # from collections import deque
 class Solution:
     def numProvinces(self, adj, V):
@@ -14,8 +14,8 @@ class Solution:
                 if adj[currnode][edge] and vis[edge]==False:
                     dfs(edge)
         def bfs(currnode):
-            q = deque([currnode])
             vis[currnode] = True
+            q = deque([currnode])
             while(q):
                 node = q.popleft()
                 for edge in range(V):
